@@ -8,3 +8,32 @@
   width: 1240px;
   margin: auto;
 }
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.banner_text {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.banner_imgs {
+  animation: slideInRight 1s ease-out forwards;
+}
