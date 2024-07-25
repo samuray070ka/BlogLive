@@ -220,3 +220,44 @@
     display: flex;
     justify-content: right;
 }
+.maps{
+    width: 100%;
+    height: 100vh;
+}
+.map_text{
+    padding: 40px 60px;
+    width: 40%;
+    position: absolute;
+    color: #fff;
+    margin-top: -700px;
+    right: 100px;
+    height: 85vh;
+    background-color: #198754;
+}
+.box{
+    /* display: flex; */
+    align-items: center;
+}
+.flex_box{
+    display: flex;
+}
+.box_p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.box_icon{
+    transform: translateX(-10px);
+    font-size: 20px;
+}
+.box_iconn{
+    transform: translateX(-10px);
+}
+.href{
+    font-size: 20px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}

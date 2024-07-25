@@ -1,0 +1,30 @@
+.yangiliklar_h2{
+    position: absolute;
+    margin-top: -90px;
+    font-size: 40px;
+    color: #fff;
+}
+.unique_page_img{
+    margin-bottom: 20px;
+}
+.yangilik_page{
+    width: 23%;
+    padding: 0;
+    border-radius: 10px;
+    height: 500px;
+    border: none;
+    margin-top: 50px;
+}
+.yangilik_img{
+    border-radius: 30px;
+}
+.yangiliklar_flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.imgs{
+    height: 250px;
+    object-fit: cover;
+    background-size: cover;
+}

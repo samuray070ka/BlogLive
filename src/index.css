@@ -31,9 +31,39 @@
 }
 
 .banner_text {
-  animation: slideInLeft 1s ease-out forwards;
+  animation: slideInLeft 1.5s ease-out forwards;
 }
 
 .banner_imgs {
-  animation: slideInRight 1s ease-out forwards;
+  animation: slideInRight 1.5s ease-out forwards;
+}
+/* Define the keyframes for the animations */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.swiper_img {
+  animation: slideInLeft 2s ease-out forwards;
+}
+
+.swiper_text {
+  animation: slideInRight 2s ease-out forwards;
 }

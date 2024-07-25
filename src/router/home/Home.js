@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './Home.css'
-import {FaArrowRight, FaCheck, FaSearchLocation, FaPhone, FaFacebook, FaYoutube, FaLinkedin, FaInstagram, FaMailchimp} from 'react-icons/fa'
+import {FaArrowRight, FaCheck, FaSearchLocation, FaPhone, FaFacebook, FaYoutube, FaLinkedin, FaInstagram, FaMailchimp, FaMailBulk} from 'react-icons/fa'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
@@ -8,10 +8,8 @@ import { Scrollbar } from 'swiper/modules';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
-import  { Autoplay } from 'swiper';
 import { FaMapLocation } from 'react-icons/fa6';
-// import 'swiper/swiper-bundle.min.css';
-// import 'swiper/swiper.min.css';
+import img from '../../assets/image.png'
 
 function Home() {
   return (
@@ -215,13 +213,15 @@ function Home() {
         </div>
         <div className="map">
           <div className='map_child'>
-          <iframe src="https://www.google.com/maps/@40.9993216,71.660163,14z?entry=ttu" frameborder="0"></iframe>
+          <img className='maps' src={img} frameborder="0"></img>
           </div>
           <div className='map_text'>
             <h3 className='map_h3'>-Aloqa</h3>
+
+            <h2>Biz bilan aloqa</h2>
             <div className='aloqa_flex'>
               <div className='box'>
-                <FaMapLocation className='box_icon'/>
+                <FaMapLocation className='box_iconn'/>
                 <p className='box_p'>locationO‘zbekiston Respublikasi, Toshkent shahar, Sirg‘ali tumani, Yangi Qumariq MFI, Istiqlol ko‘chasi, 1-uy.</p>
               </div>
 
@@ -230,33 +230,33 @@ function Home() {
                   <FaPhone className='box_icon'/>
                   <p className='box_p'>Administrativ savollar bo'yicha:</p>
                   </div>
-                <a href="">+998 71 2806400</a>
+                <a href="" className='href'>+998 71 2806400</a>
               </div>
 
               <div className='box'>
-                <FaMailchimp className='box_icon'/>
-                <p className='box_p'>info@umpt.uz</p>
+                <FaMailBulk className='box_icon'/>
+                <p className='box_p '>info@umpt.uz</p>
               </div>
 
               <div className='box'>
                 <div className='flex_box'>
-                <FaPhone className='box_icon'/>
+                <FaPhone className='box_iconn'/>
                 <p className='box_p'> Muvofiqlik xizmatiga qo'ng'iroqlar uchun</p>
                 </div>
-                <a href="">+998 71 280 65 40</a>
-                <p className='box_p'>Muvofiqlik xizmatining ishonch telefoni</p>
-                <a href="">+998 71 280 66 44</a>
+                <a href="" className='href'>+998 71 280 65 40</a>
+                <p className='box_p '>Muvofiqlik xizmatining ishonch telefoni</p>
+                <a href="" className='href'>+998 71 280 66 44</a>
               </div>
               <div className='box'>
                 <div className='flex_box'>
-                  <FaMailchimp/>
-                  <p className='box_p'>compliance@umpt.uz</p>
+                  <FaMailBulk className='box_icon'/>
+                  <p className='box_p '>compliance@umpt.uz</p>
                 </div>
                 <div className='flex_box'>
-                  <FaFacebook/>
-                  <FaLinkedin/>
-                  <FaYoutube/>
-                  <FaInstagram/>
+                  <FaFacebook className='icon'/>
+                  <FaLinkedin className='icon'/>
+                  <FaYoutube className='icon'/>
+                  <FaInstagram className='icon'/>
                 </div>
               </div>
             </div>
