@@ -47,7 +47,7 @@
     margin-top: 50px;
     outline: none;
     border: none;
-    background-color: #0F417D;
+    background-color: #198754;
     border-radius: 10px;
     font-size: 18px;
     color: #fff;
@@ -58,8 +58,8 @@
 }
 .banner_text_btn:hover{
     background-color: #fff;
-    border: 2px solid #0F417D;
-    color: #0F417D;
+    border: 2px solid #198754;
+    color: #198754;
 }
 .banner_text_icon{
     font-size: 25px;
@@ -79,4 +79,144 @@
     margin-top: 220px;
     margin-left: 100px;
     height: 150px;
+}
+.container_body{
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.second_h2{
+    font-size: 20px;
+    font-weight: 100;
+}
+.number{
+    padding: 20px;
+    color: #0F417D;
+}
+.body_h4{
+    font-size: 20px;
+    padding: 30px 0;
+}
+.swiper_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.icons_flex{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.swiper_img{
+    margin-left: 50px;
+    width: 270px;
+}
+.swiper_text_h4{
+    font-size: 25px;
+    color: #0F417D;
+    font-weight: 400;
+    transform: translateY(-50px);
+}
+.swiper_text_h5{
+    transform: translateY(-25px);
+    font-size: 25px;
+    font-weight: 500;
+}
+.icons_icon{
+    font-size: 14px;
+    font-weight: 100;
+}
+.icons_h4{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.mySwiper{
+    width: 100%;
+}
+.yangilik_h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+.yangilik_flex{
+    width: 100%;
+    justify-content: space-around;
+    border: 1px solid #198754;
+    margin-bottom: 50px;
+    padding: 20px 0;
+    display: flex;
+}
+.yangilik_card{
+    width: 300px;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.yangilik_img{
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    transition: .2s;
+}
+.yangilik_img:hover{
+    transform: scale(1.1);
+}
+.yangilik_h2{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.yangilik_btn{
+    margin: auto;
+    display: block;
+    border: none;
+    outline: none;
+    background-color: #198754;
+    font-size: 16.5px;
+    color: #fff;
+    width: 120px;
+    height: 35px;
+    border-radius: 10px;
+    transition: .2s;
+}
+.yangilik_btn:hover{
+    background-color: #fff;
+    color: #198754;
+    border: 1px solid #198754;
+}
+.yangiliklar_all{
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #198754;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+.yangiliklar_all:hover{
+    background: #fff;
+    color: #198754;
+    border: 2px solid #198754;
+}
+.all_icon{
+    font-size: 24px;
+    transform: translateX(-10px);
+    font-weight: 100;
+}
+.yangiliklar_all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex_btn{
+    display: flex;
+    justify-content: right;
 }

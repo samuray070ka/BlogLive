@@ -1,10 +1,17 @@
 import React, { useRef, useState } from 'react'
 import './Home.css'
-import {FaArrowRight} from 'react-icons/fa'
+import {FaArrowRight, FaCheck, FaSearchLocation, FaPhone, FaFacebook, FaYoutube, FaLinkedin, FaInstagram, FaMailchimp} from 'react-icons/fa'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar } from 'swiper/modules';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+import  { Autoplay } from 'swiper';
+import { FaMapLocation } from 'react-icons/fa6';
+// import 'swiper/swiper-bundle.min.css';
+// import 'swiper/swiper.min.css';
 
 function Home() {
   return (
@@ -34,7 +41,8 @@ function Home() {
         <div className="banner_second">
           <div className="container second_flex">
             <h2 className='second_h2'>BIZNING MAHSULOTLAR</h2>
-            <h4>«UZАUTO MOTORS POWERTRAIN»</h4>
+            <div className='container_body'>
+              <h4 className='body_h4'>«UZАUTO MOTORS POWERTRAIN»</h4>
             <Swiper
             scrollbar={{
             hide: true,
@@ -42,11 +50,216 @@ function Home() {
             modules={[Scrollbar]}
             className="mySwiper"
             >
-            <SwiperSlide>Slide </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide className='myswiper'>
+              <h4 className='number'>01</h4>
+              <div className='swiper_flex'>
+                <img className='swiper_img' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
+                <div className='swiper_text'>
+                  <h4 className='swiper_text_h4'>-b-dohc(2-avlod)</h4>
+                  <h5 className='swiper_text_h5'>b12(LLo)</h5>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className='myswiper'>
+              <h4 className='number'>01</h4>
+              <div className='swiper_flex'>
+                <img className='swiper_img' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
+                <div className='swiper_text'>
+                  <h4 className='swiper_text_h4'>-b-dohc(2-avlod)</h4>
+                  <h5 className='swiper_text_h5'>b12(LLo)</h5>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className='myswiper'>
+              <h4 className='number'>01</h4>
+              <div className='swiper_flex'>
+                <img className='swiper_img' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
+                <div className='swiper_text'>
+                  <h4 className='swiper_text_h4'>-b-dohc(2-avlod)</h4>
+                  <h5 className='swiper_text_h5'>b12(LLo)</h5>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                  <div className='icons_flex'>
+                      <FaCheck className='icons_icon'/>
+                      <h4 className='icons_h4'>Texnik tasnifi: <strong>HLa/DVCs/VGis</strong></h4>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
+              </div>
 
+          </div>
+        </div>
+        <div className="banner_yangilik">
+          <h1 className='yangilik_h1'>YANGILIKLAR</h1>
+          <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        freeMode={true}
+        loop={true}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false
+        }}
+        // autoplay={{
+        //   delay: 1000, 
+        //   disableOnInteraction: false
+        // }}
+        pagination={false}
+        modules={[FreeMode, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='yangilik_flex'>
+            <div className="yangilik_card">
+              <img className='yangilik_img' src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+              <h2 className='yangilik_h2'>Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi
+              </h2>
+              <button className='yangilik_btn'>Batafsil</button>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+        <div className='container flex_btn'>
+      <button className='yangiliklar_all'><FaArrowRight className='all_icon'/> Barcha yangiliklar</button>
+        </div>
+        </div>
+        <div className="map">
+          <div className='map_child'>
+          <iframe src="https://www.google.com/maps/@40.9993216,71.660163,14z?entry=ttu" frameborder="0"></iframe>
+          </div>
+          <div className='map_text'>
+            <h3 className='map_h3'>-Aloqa</h3>
+            <div className='aloqa_flex'>
+              <div className='box'>
+                <FaMapLocation className='box_icon'/>
+                <p className='box_p'>locationO‘zbekiston Respublikasi, Toshkent shahar, Sirg‘ali tumani, Yangi Qumariq MFI, Istiqlol ko‘chasi, 1-uy.</p>
+              </div>
+
+              <div className='box'>
+                  <div className='flex_box'>
+                  <FaPhone className='box_icon'/>
+                  <p className='box_p'>Administrativ savollar bo'yicha:</p>
+                  </div>
+                <a href="">+998 71 2806400</a>
+              </div>
+
+              <div className='box'>
+                <FaMailchimp className='box_icon'/>
+                <p className='box_p'>info@umpt.uz</p>
+              </div>
+
+              <div className='box'>
+                <div className='flex_box'>
+                <FaPhone className='box_icon'/>
+                <p className='box_p'> Muvofiqlik xizmatiga qo'ng'iroqlar uchun</p>
+                </div>
+                <a href="">+998 71 280 65 40</a>
+                <p className='box_p'>Muvofiqlik xizmatining ishonch telefoni</p>
+                <a href="">+998 71 280 66 44</a>
+              </div>
+              <div className='box'>
+                <div className='flex_box'>
+                  <FaMailchimp/>
+                  <p className='box_p'>compliance@umpt.uz</p>
+                </div>
+                <div className='flex_box'>
+                  <FaFacebook/>
+                  <FaLinkedin/>
+                  <FaYoutube/>
+                  <FaInstagram/>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     </div>
