@@ -4,7 +4,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { FaSearch, FaEye, FaUser } from 'react-icons/fa';
 import './Navbar.css';
 import {Link} from 'react-router-dom'
-import {aboutCompany, KorporativFaolyat} from '../../static/Index'
 
 function Navbar() {
   const [isSearchActive, setSearchActive] = useState(false);
@@ -41,13 +40,33 @@ function Navbar() {
                 KOMPANIYA
               </a>
               <ul className='dropdown-menu' aria-labelledby='navbarDropdown1'>
-                {
-                  aboutCompany.map((item, inx) => (
-                <Link className='link' to={`${item.link}`} key={inx}>
-                  <li className='dropdown-item' >{item.name}</li>
+                <Link className='link' to={'/kompaniya-haqida'}>
+                  <li><a className='dropdown-item' href='#'>Kompaniya haqida</a></li>
                 </Link>
-                  ))
-                }
+                <Link className='link' to={'/maqsad'}>
+                  <li><a className='dropdown-item' href='#'>Maqsad va qadriyatlarimiz</a></li>
+                </Link>
+                <Link className='link' to={'/qarashlarimiz'}>
+                  <li><a className='dropdown-item' href='#'>Qarashlarimiz va vazifalarimiz</a></li>
+                </Link>
+                <Link className='link' to={'/kuzatuv'}>
+                  <li><a className='dropdown-item' href='#'>Kuzatuv kengashi</a></li>
+                </Link>
+                <Link className='link' to={'/rahbaryat'}>
+                  <li><a className='dropdown-item' href='#'>Rahbariyat</a></li>
+                </Link>
+                <Link className='link' to={'/tashkiliy'}>
+                  <li><a className='dropdown-item' href='#'>Tashkiliy tuzilma</a></li>
+                </Link>
+                <Link className='link' to={'/rivojlanish'}>
+                <li><a className='dropdown-item' href='#'>Rivojlantirish strategiyasi</a></li>
+                </Link>
+                <Link className='link' to={'/atrof'}>
+                  <li><a className='dropdown-item' href='#'>Atrof-muhitni muhofaza qilish siyosati</a></li>
+                </Link>
+                <Link className='link' to={'/energiya'}>
+                  <li><a className='dropdown-item' href='#'>Energiya boshqaruv tizimlari siyosati</a></li>
+                </Link>
               </ul>
             </li>
             <li className='nav-item dropdown'>
@@ -55,13 +74,60 @@ function Navbar() {
                 KORPORATIV FAOLIYAT
               </a>
               <ul className='dropdown-menu' aria-labelledby='navbarDropdown2'>
-                {
-                  KorporativFaolyat.map((item, inx) => (
-                    <Link className='link' to={`${item.link}`} key={inx}>
-                      <li className='dropdown-item'>{item.name}</li>
-                    </Link>
-                  ))
-                }
+                <Link className='link' to={'/korparativ'}>
+                  <li><a className='dropdown-item' href='#'>Korporativ boshqaruv bo'yicha hujjatlar</a></li>
+                </Link>
+                <Link className='link' to={'/nizom'}>
+                  <li><a className='dropdown-item' href='#'>Nizom</a></li>
+                </Link>
+                <Link className='link' to={'/aksiyadorlar'}>
+                  <li><a className='dropdown-item' href='#'>Aksiyadorlar yig'ilishi</a></li>
+                </Link>
+                <Link className='link' to={'/affillangan'}>
+                  <li><a className='dropdown-item' href='#'>Аffillangan shaxslar</a></li>
+                </Link>
+                <Link className='link' to={'/muhim'}>
+                  <li><a className='dropdown-item' href='#'>Muhim faktlar</a></li>
+                </Link>
+                <Link className='link' to={'/mehnat'}>
+                  <li><a className='dropdown-item' href='#'>Mehnat muxofazasi va texnik xavfsizlik</a></li>
+                </Link>
+                <Link className='link' to={'/dividendlar'}>
+                  <li><a className='dropdown-item' href='#'>Dividendlar</a></li>
+                </Link>
+                <Link className='link' to={'/hisobotlar'}>
+                  <li><a className='dropdown-item' href='#'>Hisobotlar</a></li>
+                </Link>
+                <Link className='link' to={'/harid'}>
+                  <li><a className='dropdown-item' href='#'>Harid rejasi</a></li>
+                </Link>
+                <Link className='link' to={'/tanlov'}>
+                  <li><a className='dropdown-item' href='#'>Tanlov (tender)</a></li>
+                </Link>
+                <Link className='link' to={'/jamiyat'}>
+                  <li><a className='dropdown-item' href='#'>Jamiyat tomonidan sotib olingan aksiyalar</a></li>
+                </Link>
+                <Link className='link' to={'/biznes'}>
+                  <li><a className='dropdown-item' href='#'>Biznes Reja</a></li>
+                </Link>
+                <Link className='link' to={'/qimmatli'}>
+                  <li><a className='dropdown-item' href='#'>Qimmatli qog'ozlar emissiyasi</a></li>
+                </Link>
+                <Link className='link' to={'/auditor'}>
+                  <li><a className='dropdown-item' href='#'>Auditor hulosalari</a></li>
+                </Link>
+                <Link className='link' to={'/moliyaviy'}>
+                  <li><a className='dropdown-item' href='#'>Moliyaviy va iqtisodi holat ko'rsatkichlari</a></li>
+                </Link>
+                <Link className='link' to={'/jamiyat-yoki'}>
+                  <li><a className='dropdown-item' href='#'>Jamiyat yoki uning boshqaruv organlari tomonidan tuzilgan kollegial va maslahat organlari</a></li>
+                </Link>
+                <Link className='link' to={'/aksiyadorlarning'}>
+                  <li><a className='dropdown-item' href='#'>Aksiyadorlarning umumiy yig'ilishida qabul qilingan qarorlar bo'yicha ovoz berish yakunlari</a></li>
+                </Link>
+                <Link className='link' to={'/malaka'}>
+                  <li><a className='dropdown-item' href='#'>Malaka oshirish</a></li>
+                </Link>
               </ul>
             </li>
             <Link className='link' to={'/yangiliklar'}>
@@ -79,12 +145,24 @@ function Navbar() {
                 ISHGA TAKLIF
               </a>
               <ul className='dropdown-menu' aria-labelledby='navbarDropdown3'>
-                <li><a className='dropdown-item' href='#'>Bo'sh ish o'rinlari</a></li>
-                <li><a className='dropdown-item' href='#'>Tanlov bosqichlari</a></li>
-                <li><a className='dropdown-item' href='#'>Xodimlarning rotatsiyasi</a></li>
-                <li><a className='dropdown-item' href='#'>Bizning afzaliklarimiz</a></li>
-                <li><a className='dropdown-item' href='#'>Muvaqqiyat tarixi</a></li>
-                <li><a className='dropdown-item' href='#'>Kompaniya xodimlari uchun ma'lumot</a></li>
+                <Link className='link' to={'/bosh'}>
+                  <li><a className='dropdown-item' href='#'>Bo'sh ish o'rinlari</a></li>
+                </Link>
+                <Link className='link' to={'/tanlov-bosqich'}>
+                  <li><a className='dropdown-item' href='#'>Tanlov bosqichlari</a></li>
+                </Link>
+                <Link className='link' to={'/xodimlar'}>
+                  <li><a className='dropdown-item' href='#'>Xodimlarning rotatsiyasi</a></li>
+                </Link>
+                <Link className='link' to={'/bizning'}>
+                  <li><a className='dropdown-item' href='#'>Bizning afzaliklarimiz</a></li>
+                </Link>
+                <Link className='link' to={'/muvaqqiyat'}>
+                  <li><a className='dropdown-item' href='#'>Muvaqqiyat tarixi</a></li>
+                </Link>
+                <Link className='link' to={'/kompaniya'}>
+                  <li><a className='dropdown-item' href='#'>Kompaniya xodimlari uchun ma'lumot</a></li>
+                </Link>
               </ul>
             </li>
             <li className='nav-item'>

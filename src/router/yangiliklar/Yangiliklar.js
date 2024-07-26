@@ -1,13 +1,11 @@
 import React from 'react'
-import img from '../../assets/Screenshot 2024-07-25 165338.png'
 import './Yangiliklar.css'
 import {Link} from 'react-router-dom'
 import {FaArrowRight} from 'react-icons/fa'
 function Yangiliklar() {
   return (
     <div className='yangiliklar'>
-        <img className='unique_page_img' src={img} alt="" />
-      <div className='black'></div>
+        <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
       <div className="container">
         <Link className='link' to={'/'}>
           <h3 className='logo'>BOSH SAHIFA</h3>

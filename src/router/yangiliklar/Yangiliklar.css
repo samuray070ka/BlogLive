@@ -1,11 +1,28 @@
 .yangiliklar_h2{
     position: absolute;
-    margin-top: -90px;
+    top: 180px;
     font-size: 40px;
-    color: #fff;
+    color: #198754;
 }
 .unique_page_img{
     margin-bottom: 20px;
+    height: 25vh;
+    width: 100%;
+    background-color: black;
+    object-fit: cover;
+    background-size: cover;
+    opacity: 1; 
+    pointer-events: none; 
+}
+.dark{
+    width: 100%;
+    height: 25vh;
+    background-color: black;
+}
+.logo{
+    position: absolute;
+    top: 140px;
+    color: #fff ;
 }
 .yangilik_page{
     width: 23%;
