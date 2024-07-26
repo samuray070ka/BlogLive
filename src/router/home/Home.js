@@ -108,7 +108,7 @@ function Home() {
           </div>
         </div>
         <div className="banner_yangilik">
-          <h1 className='yangilik_h1'>YANGILIKLAR</h1>
+          <h1 className='yangilik_h12'>YANGILIKLAR</h1>
           <Swiper
         slidesPerView={3}
         spaceBetween={30}

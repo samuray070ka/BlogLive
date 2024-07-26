@@ -40,6 +40,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.banner_yangilik{
+    display: flex;
+    flex-wrap: wrap;
+}
 .imgs{
     height: 250px;
     object-fit: cover;

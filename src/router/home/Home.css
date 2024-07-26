@@ -133,8 +133,9 @@
 .mySwiper{
     width: 100%;
 }
-.yangilik_h1{
+.yangilik_h12{
     text-align: center;
+    margin: auto;
     font-size: 50px;
     margin-top: 50px;
     margin-bottom: 50px;

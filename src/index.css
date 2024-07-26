@@ -269,4 +269,213 @@
   height: 20px;
   margin-top: 50px;
   margin-bottom: 100px;
+} 
+.kor_table {
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.kor_table tr {
+  border: 1px solid black;
+}
+.kor_table tr td{
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.kor_h4{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+.all_table{
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.all_table tr{
+  border: 1px solid black;
+}
+.all_table tr td{
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+.all_table tr th{
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+.all_table tr td{
+  width: 50%;
+}
+.all_table tr td a{
+  text-decoration: none;
+  color: #198754;
+}
+.muhim_table{
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 100px;
+}
+.muhim_table tr{
+  border: 1px solid black;
+}
+.muhim_table tr td{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+.muhim_table tr th{
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+.muhim_table tr td a{
+  text-decoration: none;
+  color: #198754;
+}
+.kor_h3{
+  font-size: 20px;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;  
+  margin-bottom: 10px;
+}
+.dividend_table{
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 100px;
+}
+.dividend_table tr{
+  border: 1px solid black;
+}
+.dividend_table tr td,
+.dividend_table tr th{
+  border: 1px solid black;
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+}
+.hisobot_table{
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+.hisobot_table tr{
+  border: 1px solid black;
+}
+.hisobot_table tr td{
+  width: 50%;
+}
+.hisobot_table tr td,
+.hisobot_table tr th{
+  border: 1px solid black;
+  font-size: 18px;
+  padding: 5px;
+  text-align: center;
+}
+.hisobot_table tr td a{
+  text-decoration: none;
+  color: #198754;
+}
+.tanlov_flex{
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tanlov_box{
+  width: 640px;
+  border: 1px solid #198754;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.tanlov_h3_dod{
+  font-size: 20px;
+  color: #198754;
+  margin-bottom: 20px;
+}
+.tanlov_box_h4{
+  font-size: 18px;
+}
+.tanlov_box a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #198754;
+}
+.jamiyat{
+  text-align: center;
+  padding: 100px 0;
+}
+.bosh_h4{
+  margin-top: -200px;
+}
+.bosh_flex{
+  width: 100%;
+  box-shadow: 0 0 2px #0008;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.bosh_h3{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+}
+.bosh_inp{
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: #eee;
+  font-size: 18px;
+  font-weight: 100;
+  padding-left: 10px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+.bosh_inp::placeholder{
+  color: black;
+}
+.bosh_btn{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 100;
+  background-color: #198754;
+  color: #fff;
+  border-radius: 20px;
+  height: 50px;
+  transition: .2s;
+}
+.bosh_btn:hover{
+  background-color: #fff;
+  color: #198754;
+  border: 1px solid #198754;
+}
+.bosh_btn:active{
+  transform: scale(0.98);
+}
+.xodim_h5{
+  font-size: 20px;
+  color: #198754;
+  padding: 50px 0;
+  cursor: pointer;
+}
+.yangilik_card{
+  min-height: 70vh;
+}
+.yangilik_flex{
+  border: 1px solid dodgerblue;
 }
