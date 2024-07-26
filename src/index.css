@@ -479,3 +479,9 @@
 .yangilik_flex{
   border: 1px solid dodgerblue;
 }
+.komp_h3{
+  font-size: 20px;
+  padding: 50px 0;
+  color: #198754;
+  cursor: pointer;
+}
