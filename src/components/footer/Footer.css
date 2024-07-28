@@ -15,7 +15,7 @@
 }
 .flex{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .footer_collaction{
     width: 200px;

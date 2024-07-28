@@ -3,11 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+  list-style: none;
 }
 .container{
   width: 1240px;
   margin: auto;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%);
@@ -30,11 +36,11 @@
   }
 }
 
-.banner_text {
+.banner_textsss {
   animation: slideInLeft 1.5s ease-out forwards;
 }
 
-.banner_imgs {
+.banner_imgsssss {
   animation: slideInRight 1.5s ease-out forwards;
 }
 /* Define the keyframes for the animations */
@@ -60,11 +66,11 @@
   }
 }
 
-.swiper_img {
+.swiper_imgssss {
   animation: slideInLeft 2.5s ease-out forwards;
 }
 
-.swiper_text {
+.swiper_textssss {
   animation: slideInRight 2.5s ease-out forwards;
 }
 
