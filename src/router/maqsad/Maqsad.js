@@ -1,59 +1,96 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import '../../index.css'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import '../../index.css';
 
 function Maqsad() {
+  const [maqsad, setMaqsad] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://uzavtomotors.pythonanywhere.com/goal/maqsad/')
+      .then(response => {
+        console.log('Fetch response:', response);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Fetched data:', data);
+        setMaqsad(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Fetch error:', error);
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  console.log('Kompaniya state:', maqsad);
+
   return (
     <div className='maqsad'>
-      <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
-      <div className="container">
-        <Link className='link' to={'/'}>
-          <h3 className='logo'>BOSH SAHIFA</h3>
-        </Link>
-        <h1 className='kompaniya_h4'>MAQSAD VA QADRIYATLARIMIZ
-        </h1>
-          <h3 className='maqsad_h3'>BIZNING MAQSADLARIMIZ</h3>
-          <ul className='maqsad_collaction'>
-            <li className='kompaniya_item'>Biz har bir ishda xavfsizlikka rioya qilamiz.</li>
-            <li className='kompaniya_item'>Biz mijozlarimiz ishonchini qozona oluvchi jahon darajasidagi dvigatellarni ishlab chiqaramiz.</li>
-            <li className='kompaniya_item'>Biz ishlab chiqarish jarayonlari va metodlarini doimiy ravishda takomillashtiramiz.</li>
-            <li className='kompaniya_item'>Biz innovatsion texnologiyalarni joriy qilish, mahalliylashtirishni kengaytirish va xarajatlarni optimallashtirish orqali avtomobilsozlik sanoatining rivojlanishiga o'z hissamizni qo'shamiz.
-            </li>
-            <li className='kompaniya_item'>Biz atrof-muhitga salbiy ta'sir va energiya sarfini kamaytiramiz.</li>
-          </ul>
-          <img className='kompaniya_img_small' src="https://umpt.uz/storage/1.jpg" alt="" />
-          <h3 className='maqsad_h3'>BIZNING QADRIYATLARIMIZ</h3>
-        <div className="table-container">
-      <table className="styled-table">
-        <thead>
-          <tr>
-            <th>Mijoz</th>
-            <th>Yuqori standartlar</th>
-            <th>O'zaro munosabatlar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Mijoz biz uchun eng muhim ahamiyatga ega. Biz ularning ehtiyojlariga diqqat bilan quloq solamiz.
-              Bizning ishimiz asosida xavfsizlik va sifat turadi va biz ulardan hech qachon voz kechmaymiz.
-            </td>
-            <td>
-              Hallolik va vijdonlilik hamma harakatlarimizning asosidir. Ixtirochilik va innovatsiya bizni harakatlantiruvchi kuchdir.
-              Biz qiyinchiliklar haqida ochiq gapiramiz. Kompaniyaning maqsadlariga erishish uchun har birimiz mas’ulmiz.
-            </td>
-            <td>
-              Bizning muvaffaqiyatlarimiz kompaniya ichidagi va undan tashqaridagi o'zaro munosabatlarimizga bog'liq.
-              Mijozlarning bizga bo'lgan sadoqatini oshirish maqsadida turli xil fikrlash va har tomonlama hamkorlikni rag'batlantiramiz.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <img className='kompaniya_img_small' src="https://umpt.uz/storage/2.jpg" alt="" />
+      {maqsad && (
+        <div>
+          <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+          <div className="container">
+            <Link className='link' to={'/'}>
+              <h3 className='logo'>BOSH SAHIFA</h3>
+            </Link>
+            {
+              maqsad.goal_companies && maqsad.goal_companies.map((item, inx) => (
+                <div key={inx}>
+                    <h1 className='kompaniya_h4'>{item.name}</h1>
+                    <h3 className='maqsad_h3'>{item.title1}</h3>
+            <ul className='maqsad_collaction'>
+              {
+                item.goal_list && item.goal_list.map((item, inx) => (
+                  <li className='kompaniya_item' key={inx}>{item}</li>
+                ))
+              }
+            </ul>
+            <img className='kompaniya_img_small' src={item.image1} alt="" />
+            <h3 className='maqsad_h3'>{item.title2}</h3>
+            <div className="table-container">
+              {
+                item.table && item.table.map((item, inx) => (
+                  <table className="styled-table">
+                  <thead>
+                    <tr>
+                      <th>{item}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                       {item}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                ))
+              }
+             
+            </div>
+            <img className='kompaniya_img_small' src={item.image2} alt="" />
+                  </div>
+              ))
+            }
+          </div>
         </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Maqsad
+export default Maqsad;
