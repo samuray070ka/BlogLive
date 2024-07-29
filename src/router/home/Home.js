@@ -254,7 +254,7 @@ function Home() {
         </div>
 
         <section>
-            <h2 className='text-[55px] text-center'>YANGILIKLAR</h2>
+            <h2 className='text-[30px] md:text-[55px] text-center'>YANGILIKLAR</h2>
           <Marquee className=''>
                 <div className='flex gap-10'>
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -368,12 +368,15 @@ function Home() {
         <div className="m-auto mt-8" style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.135435542163!2d69.27551267557378!3d41.30591720104537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b232a6559f7%3A0x1839c463a783508e!2zIlV6QXV0byBNb3RvcnMiINCQ0J4!5e0!3m2!1sen!2s!4v1722161731087!5m2!1sen!2s"
-      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+      style={{ position: 'absolute', top: 0,  left: 0, width: '100%', height: '100%', border: 0 }}
       allowFullScreen=""
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     ></iframe>
+    <div>
+    </div>
   </div>
+      {/* <p className=' absolute '>loremmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmnnnnnnnnnnnhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhgygvhbn</p> */}
 
 
 
