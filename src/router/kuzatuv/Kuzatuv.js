@@ -1,10 +1,17 @@
 import React from 'react'
 import '../../index.css'
 import {Link} from 'react-router-dom'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster'
 function Kuzatuv() {
   return (
-    <div className='kuzatuv'>
-       <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+    <div className='kuzatuv grays'>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
+       <div>
+       <img className='unique_page_img cart_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+       <div class="absolute inset-0 opacity-50 img-face"></div>
+       </div>
       <div className="container">
         <Link className='link' to={'/'}>
           <h3 className='logo'>BOSH SAHIFA</h3>

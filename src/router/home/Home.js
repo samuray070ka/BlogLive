@@ -13,8 +13,11 @@ import 'swiper/css/scrollbar';
 import { Scrollbar } from 'swiper/modules';
 import { FaCheck } from 'react-icons/fa';
 import { b_doh01, b_doh02, b_doh03, b_doh04, b_doh05 } from '../../service/index';
+import { useSelector } from 'react-redux';
+import FontSizeAdjuster from '../../components/FontSizeAdjuster';
 
 function Home() {
+  const { color, fontSize } = useSelector((state) => state.theme);
   // const settings = {
   //   dots: false,
   //   infinite: true, 
@@ -27,9 +30,13 @@ function Home() {
   //   arrows: false, 
   // };
   return (
-    <section>
+    <div className='h-full w-full grays'>
+      <section className={`${color}`} style={{ fontSize: `${fontSize}px homePage` }}>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
       <div>
-      <video className="homepage-video mb-7" autoPlay loop muted>
+      <video className="homepage-video mb-7 cart_img" autoPlay loop muted>
           <source className='video_home' src="https://umpt.uz/storage/upload/slider_image/1692765835.mp4" type="video/mp4" />
         </video>
       </div>
@@ -54,7 +61,7 @@ function Home() {
               </button>
             </div>
             <div className='banner_imgsssss mt-10 md:'>
-              <img className='w-full md:w-[500px]' src="https://umpt.uz/frontend/assets/images/about2.jpg" alt="" />
+              <img className='w-full md:w-[500px] cart_img' src="https://umpt.uz/frontend/assets/images/about2.jpg" alt="" />
               <div>
               </div>
             </div>
@@ -104,7 +111,7 @@ function Home() {
               <div className='swiper_flex block md:flex items-center justify-between max-w-[1000px] m-auto'>
                <div className='swiper_imgssss'>
                <h4 className='text-5xl'>01</h4>
-                   <img className='w-full md:w-[250px]' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
+                   <img className='w-full md:w-[250px] cart_img' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
                </div>
                 <div className='swiper_textssss mt-8'>
                   <div className='flex items-center gap-2 text-[#0F417D]'>
@@ -128,7 +135,7 @@ function Home() {
             <SwiperSlide className='myswiper mt-10'>
               <h4 className='text-5xl'>02</h4>
               <div className='swiper_flex block md:flex items-center justify-between max-w-[1000px] m-auto'>
-                <img className='w-full md:w-[250px]' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
+                <img className='w-full md:w-[250px] cart_img' src="https://umpt.uz/storage/upload/products/4_1697004410.jpg" alt="" />
                 <div className='swiper_text mt-8'>
                   <div className='flex items-center gap-2 text-[#0F417D]'>
                     <div className='h-[2px] w-6 bg-[#0F417D]'></div>
@@ -151,7 +158,7 @@ function Home() {
             <SwiperSlide className='myswiper mt-10'>
               <h4 className='text-5xl'>03</h4>
               <div className='swiper_flex block md:flex items-center justify-between max-w-[1000px] m-auto'>
-                <img className='w-full md:w-[250px]' src="https://umpt.uz/storage/upload/products/6_1697004440_1697614215.jpg" alt="" />
+                <img className='w-full md:w-[250px] cart_img' src="https://umpt.uz/storage/upload/products/6_1697004440_1697614215.jpg" alt="" />
                 <div className='swiper_text mt-8'>
                   <div className='flex items-center gap-2 text-[#0F417D]'>
                     <div className='h-[2px] w-6 bg-[#0F417D]'></div>
@@ -175,7 +182,7 @@ function Home() {
             <SwiperSlide className='myswiper mt-10'>
               <h4 className='text-5xl'>04</h4>
               <div className='swiper_flex block md:flex items-center justify-between max-w-[1000px] m-auto'>
-                <img className='w-full md:w-[250px]' src="https://umpt.uz/storage/upload/products/3_1697004395.jpg" alt="" />
+                <img className='w-full md:w-[250px] cart_img' src="https://umpt.uz/storage/upload/products/3_1697004395.jpg" alt="" />
                 <div className='swiper_text mt-8'>
                   <div className='flex items-center gap-2 text-[#0F417D]'>
                     <div className='h-[2px] w-6 bg-[#0F417D]'></div>
@@ -258,7 +265,7 @@ function Home() {
           <Marquee className=''>
                 <div className='flex gap-10'>
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+                        <img class="rounded-t-lg w-full cart_img" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
                     <div className="p-3">
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
                         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -271,7 +278,7 @@ function Home() {
                 </div>
 
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+                        <img class="rounded-t-lg w-full cart_img" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
                     <div className="p-3">
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
                         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -284,7 +291,7 @@ function Home() {
                 </div>
 
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+                        <img class="rounded-t-lg w-full cart_img" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
                     <div className="p-3">
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
                         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -297,7 +304,7 @@ function Home() {
                 </div>
 
                 <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
+                        <img class="rounded-t-lg w-full cart_img" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
                     <div className="p-3">
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
                         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -309,56 +316,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
-                    <div className="p-3">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
-                    <div className="p-3">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
-                    <div className="p-3">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg w-full" src="https://umpt.uz/storage/upload/news_image/1719317113.jpg" alt="" />
-                    <div className="p-3">
-                            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Turkmaniston Vazirlar Mahkamasi Raisini o’rinbosari B. Atdayev boshchiligidagi delegatsiyasining tashrifi</h5>
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+              
                 
              
                 </div>
@@ -381,6 +339,7 @@ function Home() {
 
 
     </section>
+    </div>
   )
 }
 

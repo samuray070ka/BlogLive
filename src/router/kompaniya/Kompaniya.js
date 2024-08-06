@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../index.css';
+import FontSizeAdjuster from '../../components/FontSizeAdjuster';
 
 function Kompaniya() {
   const [kompaniya, setKompaniya] = useState(null); // Obyekt sifatida boshlash
@@ -39,10 +40,15 @@ function Kompaniya() {
   console.log('Kompaniya state:', kompaniya);
 
   return (
-    <div className='kompaniya'>
+    <div className='kompaniya grays'>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
+      <div className='gray-overlay'></div> {/* Gray overlay */}
       {kompaniya && (
         <div>
-          <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+          <img className='unique_page_img cart_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+          <div class="absolute inset-0 opacity-50 img-face"></div>
           <div className="container">
             <Link className='link' to={'/'}>
               <h3 className='logo'>BOSH SAHIFA</h3>
@@ -53,7 +59,8 @@ function Kompaniya() {
                   <h4 className='kompaniya_h4'>{subItem?.name}</h4>
                   <h1 className='kompaniya_h1'>{subItem?.title}</h1>
                   <p className='kompaniya_p'>{subItem?.body}</p>
-                  <img className='kompaniya_img' src={subItem?.image} alt="" />
+                  <img className='kompaniya_img cart_img' src={subItem?.image} alt="" />
+                  {/* <div class="absolute top-10 inset-0 opacity-50 img-face"></div> */}
                   <p className='kompaniya_desc'>{subItem?.text}</p>
                   {
                     subItem.company_images && subItem.company_images.map((imgItem, imgIndex) => (

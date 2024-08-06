@@ -3,7 +3,7 @@ import '../../index.css'
 
 function Malaka() {
   return (
-    <div>Malaka</div>
+    <div className='grays'>Malaka</div>
   )
 }
 

@@ -1,11 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../../index.css'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster'
 
 function Maqsad() {
   return (
-    <div className='maqsad'>
-      <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+    <div className='maqsad grays'>
+        <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
+      <img className='unique_page_img cart_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
       <div className="container">
         <Link className='link' to={'/'}>
           <h3 className='logo'>BOSH SAHIFA</h3>
@@ -21,10 +25,10 @@ function Maqsad() {
             </li>
             <li className='kompaniya_item'>Biz atrof-muhitga salbiy ta'sir va energiya sarfini kamaytiramiz.</li>
           </ul>
-          <img className='kompaniya_img_small' src="https://umpt.uz/storage/1.jpg" alt="" />
+          <img className='kompaniya_img_small cart_img' src="https://umpt.uz/storage/1.jpg" alt="" />
           <h3 className='maqsad_h3'>BIZNING QADRIYATLARIMIZ</h3>
         <div className="table-container">
-      <table className="styled-table">
+      <table className="styled-table cart_img">
         <thead>
           <tr>
             <th>Mijoz</th>
@@ -50,7 +54,7 @@ function Maqsad() {
         </tbody>
       </table>
     </div>
-    <img className='kompaniya_img_small' src="https://umpt.uz/storage/2.jpg" alt="" />
+    <img className='kompaniya_img_small cart_img' src="https://umpt.uz/storage/2.jpg" alt="" />
         </div>
     </div>
   )

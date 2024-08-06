@@ -6,6 +6,8 @@
   text-decoration: none;
   list-style: none;
 }
+
+
 .container{
   width: 1240px;
   margin: auto;
@@ -248,8 +250,7 @@
   margin-bottom: 20px;
 }
 .cart_img:hover{
-  transform: scale(1.1);
-  border-radius: 20px;
+  /* transform: scale(1.1); */
 }
 .tuzilma_img{
   width: 80%;

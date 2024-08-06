@@ -38,9 +38,11 @@ import Xodimlar from './router/ishga-router/Xodimlar'
 import Bizning from './router/ishga-router/Bizning'
 import Muvaqqiyatli from './router/ishga-router/Muvaqqiyatli'
 import Kompaniya from './router/ishga-router/Kompaniya'
+import { useSelector } from 'react-redux';
 function App() {
+  const { color, fontSize } = useSelector((state) => state.theme);
   return (
-    <div className="App">
+    <div className={`app ${color}`} style={{ fontSize: `${fontSize}px` }}>
       <Navbar/>
       <Routes>
       <Route path='/' element={<Home/>}/>

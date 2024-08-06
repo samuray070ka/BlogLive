@@ -4,11 +4,28 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { FaSearch, FaEye, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import ThemeSwitcher from "../ThemeSwitcher";
+import FontSizeAdjuster from "../FontSizeAdjuster";
+import { useDispatch, useSelector } from 'react-redux';
+import { setColor } from "../../redux/themeSlice";
 
 function Navbar() {
   const [navbar, setNavbar] = useState([]);
   const [error, setError] = useState(null);
   const [isSearchActive, setSearchActive] = useState(false);
+  const [theme,setTheme] = useState("light");
+
+  useEffect(() =>{
+    if(theme === "dark"){
+      document.documentElement.classList.add("dark");
+    }else{
+      document.documentElement.classList.remove("dark")
+    }
+  },[theme])
+
+  const handleThemeSwitch = () =>{
+    setTheme(theme === "dark"  ? "light" : "dark")
+  }
 
   useEffect(() => {
     fetch("https://uzavtomotors.pythonanywhere.com/categories/")
@@ -36,8 +53,28 @@ function Navbar() {
     return () => document.removeEventListener("click", handleDocumentClick);
   }, []);
 
+  const dispatch = useDispatch();
+  const currentColor = useSelector((state) => state.theme.color);
+
+  const [openTopBar,setOpenTopBar] = useState(false);
+
+  const openTop = () =>{
+    setOpenTopBar(!openTopBar)
+    console.log('working');
+    
+  }
+
+  
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-success">
+    <>
+    <nav className="navbar navbar-expand-lg  bg-success flex flex-col">
+      <div className={`w-full h-[80px] bg-success grays ${openTopBar ? "block" : 'hidden'}`}>
+         <div className="flex items-center justify-center">
+         <FontSizeAdjuster />  
+         <ThemeSwitcher/>
+         </div>
+      </div>
       <div className="container">
         <Link className="navbar-brand" to={"/"}>
           <img
@@ -135,17 +172,21 @@ function Navbar() {
                 </div>
               )}
             </div>
-            <button className="btn btn-outline-light ms-2">
+            <button className="btn btn-outline-light ms-2" onClick={openTop}>
               <FaEye />
             </button>
+            
+            
             <button className="btn btn-outline-light ms-2">UZ</button>
             <button className="btn btn-outline-light ms-2">
               <FaUser />
             </button>
+
           </div>
         </div>
       </div>
     </nav>
+    </>
   );
 }
 

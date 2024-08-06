@@ -1,11 +1,15 @@
 import React from 'react'
 import '../../index.css'
 import {Link} from 'react-router-dom'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster'
 function Atrof() {
   return (
-    <div className='atrof'>
-       <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
-      <div className="container">
+    <div className='atrof grays'>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
+       <img className='unique_page_img cart_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
+      <div className="container grays">
         <Link className='link' to={'/'}>
           <h3 className='logo'>BOSH SAHIFA</h3>
         </Link>

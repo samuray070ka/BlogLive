@@ -1,10 +1,14 @@
 import React from 'react'
 import '../../index.css'
 import {Link} from 'react-router-dom'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster'
 
 function Qarashlarimiz() {
   return (
-    <div className='qarashl arimiz'>
+    <div className='qarashlarimiz'>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
 
 <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
       <div className="container">
@@ -22,7 +26,9 @@ function Qarashlarimiz() {
         <thead>
           <tr>
             <th>
-              <div className="icon"><img src="https://umpt.uz/storage/Vision-mission/SVG%20new%20icons/Resized%2060px/%D0%94%D1%83%D0%BC%D0%B0%D0%B9%20%D0%BE%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B5%20%D1%80%D0%B5%D1%81%D0%B0%D0%B9%D0%B7.svg" alt="icon1" /></div>
+              <div className="icon"><img src="https://umpt.uz/storage/Vision-mission/SVG%20new%20icons/Resized%2060px/%D0%94%D1%83%D0%BC%D0%B0%D0%B9%20%D0%BE%20%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B5%20%D1%80%D0%B5%D1%81%D0%B0%D0%B9%D0%B7.svg" alt="icon1" />
+              <div class="absolute inset-0 opacity-50 img-face"></div>
+              </div>
             </th>
             <th>
               <div className="icon"><img src="https://umpt.uz/storage/Vision-mission/SVG%20new%20icons/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9-%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%B8.svg" alt="icon2" /></div>

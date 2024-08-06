@@ -3,7 +3,7 @@ import '../../index.css'
 
 function Biznes() {
   return (
-    <div>Biznes</div>
+    <div className='grays'>Biznes</div>
   )
 }
 

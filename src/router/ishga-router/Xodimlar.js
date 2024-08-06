@@ -1,9 +1,13 @@
 import React from 'react'
 import '../../index.css'
 import {Link} from 'react-router-dom'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster'
 function Xodimlar() {
   return (
-    <div>
+    <div className='grays'>
+      <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
       <img className='unique_page_img' src='https://piamg.uz/uploads/news_inner/KK/KK/pE/mosaic-financial-vybrana-konsultantom-po-privatizatsii.jpg' alt="" />
       <div className="container">
         <Link className='link' to={'/'}>

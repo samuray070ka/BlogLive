@@ -1,5 +1,6 @@
 import React from 'react'
 import './Mahsulotlar.css'
+import FontSizeAdjuster from '../../components/FontSizeAdjuster';
 function Mahsulotlar() {
 const styles = {
   table: {
@@ -27,8 +28,11 @@ const styles = {
   
 };
   return (
-    <div>
-      <table style={styles.table}>
+    <div className='grays'>
+       <div className='hidden'>
+      <FontSizeAdjuster />  
+      </div>
+      <table style={styles.table} className='cart_img'>
       <thead>
         <tr>
           <th style={styles.th}>Image</th>

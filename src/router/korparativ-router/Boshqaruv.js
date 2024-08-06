@@ -2,7 +2,7 @@ import React from 'react'
 import '../../index.css'
 function Boshqaruv() {
   return (
-    <div>Boshqaruv</div>
+    <div className='grays'>Boshqaruv</div>
   )
 }
 

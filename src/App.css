@@ -1,0 +1,171 @@
+/* .app {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .light {
+    background-color: #ffffff;
+  }
+  
+  .dark {
+    background-color: #333333;
+  }
+  
+  .blue {
+    background-color: #87ceeb;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #root.blue{
+    background: #000;
+  }
+  #root.light{
+    background: red;
+  } */
+
+
+  /* Base styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#root.blue .navbar{
+  background: #3B3B3B !important;
+  /* backdrop-filter: blur(100px); */
+  /* index.css */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Adjust height as needed */
+  background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% opacity */
+  z-index: 1; /* Ensure it is above other content */
+  width: 100%;
+}
+
+#root.blue .dropdown-menu{
+  background: #3B3B3B !important;
+}
+
+#root.blue footer{
+  background: #3B3B3B !important;
+}
+
+#root.blue .homePage{
+  background: #3B3B3B !important;
+}
+
+#root.blue .kompaniya{
+  background: #3B3B3B !important;
+  color: #ffffff;
+}
+
+#root.blue .img-face{
+  background: #3B3B3B !important;
+}
+
+#root.blue .rivojlanish{
+  background: #3B3B3B !important;
+}
+
+#root.blue .btn_flex{
+  background: #3B3B3B !important;
+}
+
+#root.blue .rivoj_btn{
+  background: #3B3B3B !important;
+}
+
+#root.blue .qarashlarimiz{
+  background: #3B3B3B !important;
+  color: white;
+}
+
+#root.blue .grays{
+  background: #3B3B3B !important;
+  color: white;
+}
+
+#root.blue .cart_img{
+  filter: grayscale(100%);
+}
+
+#root.blue body{
+  background: #3B3B3B !important;
+  color: white;
+}
+
+
+
+
+/* hhhhhhhhh */
+
+#root.dark .navbar{
+  background: #C4C4C4 !important;
+  /* backdrop-filter: blur(100px); */
+  /* index.css */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Adjust height as needed */
+  background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% opacity */
+  z-index: 1; /* Ensure it is above other content */
+  width: 100%;
+}
+
+#root.dark .dropdown-menu{
+  background: #C4C4C4 !important;
+}
+
+#root.dark footer{
+  background: #C4C4C4 !important;
+}
+
+#root.dark .homePage{
+  background: #C4C4C4 !important;
+  color: white;
+}
+
+#root.dark .kompaniya{
+  background: #C4C4C4 !important;
+  color: #ffffff;
+}
+
+#root.dark .img-face{
+  background: #C4C4C4 !important;
+}
+
+#root.dark .rivojlanish{
+  background: #C4C4C4 !important;
+}
+
+#root.dark .btn_flex{
+  background: #C4C4C4 !important;
+}
+
+#root.dark .rivoj_btn{
+  background: #C4C4C4 !important;
+}
+
+#root.dark .qarashlarimiz{
+  background: #C4C4C4 !important;
+  color: white;
+}
+
+#root.dark .grays{
+  background: #C4C4C4 !important;
+  color: white;
+}
+
+#root.dark .cart_img{
+  filter: grayscale(100%);
+}
+
+#root.dark body{
+  background: #C4C4C4 !important;
+}
