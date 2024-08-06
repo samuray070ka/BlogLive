@@ -8,8 +8,8 @@ const FontSizeAdjuster = () => {
 
   return (
     <div className='flex items-center gap-4'>
-      <button className='text-xl border border-white py-2 px-3 text-black ' onClick={() => dispatch(decreaseFontSize())}>-</button>
-      <button className='text-xl border border-white py-2 px-3 text-black' onClick={() => dispatch(increaseFontSize())}>+</button>
+      <button className='text-2xl font-bold border border-white rounded-lg py-2 px-3 text-white ' onClick={() => dispatch(decreaseFontSize())}>-</button>
+      <button className='text-2xl font-bold border border-white rounded-lg py-2 px-3 text-white' onClick={() => dispatch(increaseFontSize())}>+</button>
     </div>
   );
 };

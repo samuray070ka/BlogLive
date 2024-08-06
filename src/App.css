@@ -169,3 +169,8 @@ body {
 #root.dark body{
   background: #C4C4C4 !important;
 }
+
+
+.changeBtn{
+  background: #198754;
+}

@@ -70,8 +70,9 @@ function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg  bg-success flex flex-col">
       <div className={`w-full h-[80px] bg-success grays ${openTopBar ? "block" : 'hidden'}`}>
-         <div className="flex items-center justify-center">
+         <div className="flex items-center justify-center gap-2">
          <FontSizeAdjuster />  
+          <p className="text-xl text-white">sayt ko'rinishi:</p>
          <ThemeSwitcher/>
          </div>
       </div>

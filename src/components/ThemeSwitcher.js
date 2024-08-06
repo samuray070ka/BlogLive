@@ -22,13 +22,13 @@ const ThemeSwitcher = () => {
 
   return (
     <div className='flex gap-2'>
-      <button className='bg-white py-2 px-3 text-xl font-bold text-white' onClick={() => handleColorChange('light')} disabled={currentColor === 'light'}>
+      <button className=' py-2 px-3 text-xl font-bold text-white border border-white rounded-lg changeBtn' onClick={() => handleColorChange('light')} disabled={currentColor === 'light'}>
         A
       </button>
-      <button className=' bg-gray-500 py-2 px-3 text-xl font-bold text-white' onClick={() => handleColorChange('blue')} disabled={currentColor === 'blue'}>
+      <button className=' bg-gray-500 py-2 px-3 text-xl font-bold text-white border border-white rounded-lg ' onClick={() => handleColorChange('blue')} disabled={currentColor === 'blue'}>
         A
       </button>
-      <button className='bg-black py-2 px-3 text-xl font-bold text-white' onClick={() => handleColorChange('dark')} disabled={currentColor === 'dark'}>
+      <button className='bg-black py-2 px-3 text-xl font-bold text-white border border-white rounded-lg ' onClick={() => handleColorChange('dark')} disabled={currentColor === 'dark'}>
         A
       </button>
       
